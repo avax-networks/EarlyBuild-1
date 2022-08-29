@@ -16,7 +16,7 @@ export const getUser = async ({
     const user = await env.getEntries({
       content_type: 'user',
       include: 0,
-      'fields.telegramId': id,
+      'fields.id': id,
     });
     const hasExpired = moment(
       user.items[0].fields.membershipExpiry['en-US'],
