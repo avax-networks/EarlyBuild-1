@@ -14,7 +14,7 @@ export const getUser = async ({
     const space = await client.getSpace(process.env.CONTENTFUL_SPACE as string);
     const env = await space.getEnvironment('master');
     const user = await env.getEntries({
-      content_type: 'user',
+      content_type: 'membership',
       include: 0,
       'fields.id': id,
     });

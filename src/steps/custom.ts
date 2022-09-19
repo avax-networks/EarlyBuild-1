@@ -1,7 +1,7 @@
 import { Markup, Middleware } from 'telegraf';
 import { C } from '../types';
 import { UK_NUM, US_NUM } from '../utils/constants';
-import { messagebirdMakeACall } from '../utils/messagebird';
+import { plivoMakeACall } from '../utils/plivo';
 import { validateNumber } from '../utils/validateNumber';
 
 let chatId: number | undefined;
@@ -147,7 +147,7 @@ export const custom = (): Array<Middleware<C>> => [
       );
     }
 
-    await messagebirdMakeACall({
+    await plivoMakeACall({
       from: callerId,
       to: number,
       institutionName,

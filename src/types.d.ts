@@ -1,4 +1,4 @@
-import { languages } from 'messagebird/types/voice_messages';
+import { languages } from 'plivo/types/voice_messages';
 import { Context } from 'telegraf/typings';
 
 type C = Context & {
